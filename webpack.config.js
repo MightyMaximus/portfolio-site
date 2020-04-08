@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     context: __dirname + '/src',
     entry: './main.js',
@@ -5,13 +7,14 @@ module.exports = {
         path: __dirname + '/dist',
         filename: 'bundle.js'
     },
+    mode: "development",
     watch: true,
     module: {
         rules: [{
             test:/\.(s*)css$/,
             use:['style-loader','css-loader', 'sass-loader']
         },{
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
             use: {
                 loader: 'babel-loader',
@@ -19,6 +22,17 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
+        }, {
+            test: /\.(png|svg|jpg|gif|webmanifest)$/,
+            use: [
+                'file-loader',
+            ],
         }]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: 'head'
+        })
+    ]
 };
