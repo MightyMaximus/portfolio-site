@@ -7,15 +7,15 @@ import favicon16 from './assets/favicon/favicon-16x16.png';
 import faviconMani from './assets/favicon/site.webmanifest';
 
 import curvedBorder from './assets/graphics/curved-border-flip.svg';
+import profilePic from './assets/img/aiyush.jpg';
 
 const ele = document.getElementById('border');
-console.log(document.getElementById('border'));
 const border = new Image();
 border.src = curvedBorder;
 ele.appendChild(border);
 
-/*const appName = 'Webpack Demo App';
-setTimeout(
-    () => alert(`Thanks for using ${appName}`)
-    , 500
-);*/
+const profile = document.getElementById('profileImg');
+const pic = new Image();
+pic.src = profilePic;
+pic.alt = 'Profile Picture';
+profile.appendChild(pic);
