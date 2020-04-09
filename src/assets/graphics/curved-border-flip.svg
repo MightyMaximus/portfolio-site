@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" width="500" height="150" preserveAspectRatio="none">
+	<defs>
+		<filter id="shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2"/> <!-- stdDeviation is how much to blur -->
+			<feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
+			<feComponentTransfer>
+				<feFuncA type="linear" slope="0.2"/> <!-- slope is the opacity of the shadow -->
+			</feComponentTransfer>
+			<feMerge> 
+				<feMergeNode/> <!-- this contains the offset blurred image -->
+				<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+			</feMerge>
+		</filter>
+	</defs>
+	<g>
+		<path d="M0,100C150,0,271.49,200,500,100v50H0Z" fill="#fff"/>
+		<path d="M0,100C150,0,349.2,200,500,100V0H0Z" fill="transparent" style="filter:url(#shadow)"/>
+	</g>
+</svg>

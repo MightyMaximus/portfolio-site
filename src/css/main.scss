@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Raleway&display=swap');
+
+$body-color: #dcdcdc;
+$font-stack-heading: 'Raleway', sans-serif;
+$font-stack-text: 'Open Sans', sans-serif;
+$font-color: hsl(212, 20%, 13%);
+$cover-gradient: linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+
+body{
+  margin: 0;
+  color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-stack-heading;
+}
+
+a, li, p, span {
+  font-family: $font-stack-text;
+}
+
+header {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: $cover-gradient;
+}
+
+#temp-banner {
+  width: 100%;
+  height: 30px;
+  background-color: #F6AE38;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.curved-border {
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+  /*margin-top: -150px;*/
+}
+
+.curved-border > img {
+  width: 100%;
+  height: 100%;
+}

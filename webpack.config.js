@@ -1,4 +1,5 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     context: __dirname + '/src',
@@ -11,8 +12,14 @@ module.exports = {
     watch: true,
     module: {
         rules: [{
-            test:/\.(s*)css$/,
-            use:['style-loader','css-loader', 'sass-loader']
+            test: /\.s[ac]ss$/i,
+            use:[
+                process.env.NODE_ENV !== 'production'
+                    ? 'style-loader'
+                    : MiniCssExtractPlugin.loader,
+                'css-loader',
+                'sass-loader'
+            ]
         },{
             test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
@@ -23,7 +30,7 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.(png|svg|jpg|gif|webmanifest)$/,
+            test: /\.(jpe?g|png|gif|svg|webmanifest)$/i,
             use: [
                 'file-loader',
             ],
@@ -32,7 +39,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html',
-            inject: 'head'
-        })
+            inject: 'head',
+            scriptLoading: 'defer'
+        }),
+        new MiniCssExtractPlugin({})
     ]
 };
