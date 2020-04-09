@@ -21,11 +21,8 @@ a, li, p, span {
 
 header {
   width: 100%;
-  height: 300px;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: $cover-gradient;
 }
 
 #temp-banner {
@@ -37,14 +34,31 @@ header {
   display: flex;
 }
 
-.curved-border {
-  width: 100%;
-  height: 128px;
-  overflow: hidden;
-  /*margin-top: -150px;*/
+.row {
+  display: flex;
 }
 
-.curved-border > img {
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cover {
   width: 100%;
-  height: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: $cover-gradient;
+}
+
+.curved-border {
+  width: 100%;
+  height: 148px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
