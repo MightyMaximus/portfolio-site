@@ -35,6 +35,7 @@ $xl-min: 1200px;
 }
 
 %button {
+  position: relative;
   text-decoration: none;
   text-align: center;
   border-radius: 48px;
@@ -43,8 +44,47 @@ $xl-min: 1200px;
   box-shadow: 0 2px 5px 1px #efefef;
 }
 
+%button:hover {
+  top: -1px;
+  text-decoration: none;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
+
+%button:active {
+  -webkit-box-shadow: inset 0 0 5px #c1c1c1;
+  -moz-box-shadow: inset 0 0 5px #c1c1c1;
+  box-shadow: inset 0 0 5px #c1c1c1;
+  outline: none;
+}
+
 .button {
   @extend %button;
+}
+
+.solid-button {
+  @extend %button;
+  background-color: #4591e7;
+  color: #fff;
+  border-color: #9dc0e7;
+}
+
+.hollow-button {
+  @extend %button;
+  border-color: #ccd1dc;
+  background-color: #fff;
+  color: #192938;
+}
+
+.link {
+  text-decoration: none;
+  color: #0470dc;
+  font-weight: bold;
+}
+
+.link:hover {
+  border-bottom: 2px solid #0470dc;
 }
 
 body{
@@ -57,8 +97,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-stack-heading;
 }
 
-a, li, p, span {
+a, li, p {
   font-family: $font-stack-text;
+}
+
+p {
+  line-height: 1.5;
+}
+
+i {
+  color: hsl(212, 20%, 68%);
 }
 
 header {
@@ -75,6 +123,10 @@ footer {
   ul {
     @extend %list-inline;
   }
+}
+
+.span {
+  font-family: $font-stack-text;
 }
 
 #temp-banner {
@@ -112,6 +164,7 @@ footer {
 .cover {
   @extend %col;
   width: 100%;
+  height: 10em;
   justify-content: flex-end;
   background: $cover-gradient;
 }
@@ -125,4 +178,38 @@ footer {
     width: 100%;
     height: 100%;
   }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 2px 5px 1px #efefef;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-back {
+  transform: rotateY(180deg) translate(0, -100%);
+  border-radius: 10px;
 }
