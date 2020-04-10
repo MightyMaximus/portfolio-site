@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Raleway&display=swap);\"]);\n// Module\nexports.push([module.i, \"body {\\n  margin: 0;\\n  color: #1b2128; }\\n\\nh1, h2, h3, h4, h5, h6 {\\n  font-family: \\\"Raleway\\\", sans-serif; }\\n\\na, li, p, span {\\n  font-family: \\\"Open Sans\\\", sans-serif; }\\n\\nheader {\\n  width: 100%;\\n  height: auto;\\n  display: flex; }\\n\\n#temp-banner {\\n  width: 100%;\\n  height: 30px;\\n  background-color: #F6AE38;\\n  justify-content: center;\\n  align-items: center;\\n  display: flex; }\\n\\n.row {\\n  display: flex; }\\n\\n.col {\\n  display: flex;\\n  flex-direction: column; }\\n\\n#profileImg img {\\n  width: 128px;\\n  height: auto;\\n  border-radius: 50%; }\\n\\n.cover {\\n  width: 100%;\\n  height: 40%;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: flex-end;\\n  background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%); }\\n\\n.curved-border {\\n  width: 100%;\\n  height: 148px;\\n  overflow: hidden; }\\n  .curved-border img {\\n    width: 100%;\\n    height: 100%; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/main.scss?../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Raleway&display=swap);\"]);\n// Module\nexports.push([module.i, \".list-inline, footer ul, .row {\\n  display: flex; }\\n\\nfooter, .col, .cover {\\n  display: flex;\\n  flex-direction: column; }\\n\\n.list-inline, footer ul {\\n  padding: 0; }\\n  .list-inline li, footer ul li {\\n    list-style: none; }\\n\\n.button {\\n  text-decoration: none;\\n  text-align: center;\\n  border-radius: 48px;\\n  border: 1px solid;\\n  padding: 8px 64px 8px 64px;\\n  box-shadow: 0 2px 5px 1px #efefef; }\\n\\nbody {\\n  margin: 0;\\n  color: #1b2128;\\n  background-color: #fafafa; }\\n\\nh1, h2, h3, h4, h5, h6 {\\n  font-family: \\\"Raleway\\\", sans-serif; }\\n\\na, li, p, span {\\n  font-family: \\\"Open Sans\\\", sans-serif; }\\n\\nheader {\\n  width: 100%;\\n  height: auto;\\n  display: flex; }\\n\\nfooter {\\n  width: 100%;\\n  align-items: center; }\\n\\n#temp-banner {\\n  width: 100%;\\n  height: 30px;\\n  background-color: #F6AE38;\\n  justify-content: center;\\n  align-items: center;\\n  display: flex; }\\n\\n.container {\\n  max-width: 1200px;\\n  margin-left: auto;\\n  margin-right: auto;\\n  background-color: #fff; }\\n\\n#profileImg img {\\n  width: 128px;\\n  height: auto;\\n  border-radius: 50%; }\\n\\n.cover {\\n  width: 100%;\\n  justify-content: flex-end;\\n  background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%); }\\n\\n.curved-border {\\n  width: 100%;\\n  height: 148px;\\n  overflow: hidden; }\\n  .curved-border img {\\n    width: 100%;\\n    height: 100%; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/main.scss?../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -193,6 +193,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./assets/graphics/fitster.svg":
+/*!*************************************!*\
+  !*** ./assets/graphics/fitster.svg ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"7d9053974926d3469ff5ef9caae6b261.svg\");\n\n//# sourceURL=webpack:///./assets/graphics/fitster.svg?");
+
+/***/ }),
+
+/***/ "./assets/graphics/github.svg":
+/*!************************************!*\
+  !*** ./assets/graphics/github.svg ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"1dd961ab93ae56a385c9fae65a01e8cf.svg\");\n\n//# sourceURL=webpack:///./assets/graphics/github.svg?");
+
+/***/ }),
+
+/***/ "./assets/graphics/prave.svg":
+/*!***********************************!*\
+  !*** ./assets/graphics/prave.svg ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"fd23f1fb728136064d25069f09dc8a7b.svg\");\n\n//# sourceURL=webpack:///./assets/graphics/prave.svg?");
+
+/***/ }),
+
 /***/ "./assets/img/aiyush.jpg":
 /*!*******************************!*\
   !*** ./assets/img/aiyush.jpg ***!
@@ -224,7 +260,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.scss */ \"./css/main.scss\");\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_favicon_apple_touch_icon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/favicon/apple-touch-icon.png */ \"./assets/favicon/apple-touch-icon.png\");\n/* harmony import */ var _assets_favicon_favicon_32x32_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/favicon/favicon-32x32.png */ \"./assets/favicon/favicon-32x32.png\");\n/* harmony import */ var _assets_favicon_favicon_16x16_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/favicon/favicon-16x16.png */ \"./assets/favicon/favicon-16x16.png\");\n/* harmony import */ var _assets_favicon_site_webmanifest__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/favicon/site.webmanifest */ \"./assets/favicon/site.webmanifest\");\n/* harmony import */ var _assets_graphics_curved_border_flip_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/graphics/curved-border-flip.svg */ \"./assets/graphics/curved-border-flip.svg\");\n/* harmony import */ var _assets_img_aiyush_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/img/aiyush.jpg */ \"./assets/img/aiyush.jpg\");\n__webpack_require__(/*! file-loader?name=[name].[ext]!./index.html */ \"../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html\");\n\n\n\n\n\n\n\n\nvar ele = document.getElementById('border');\nvar border = new Image();\nborder.src = _assets_graphics_curved_border_flip_svg__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\nele.appendChild(border);\nvar profile = document.getElementById('profileImg');\nvar pic = new Image();\npic.src = _assets_img_aiyush_jpg__WEBPACK_IMPORTED_MODULE_6__[\"default\"];\npic.alt = 'Profile Picture';\nprofile.appendChild(pic);\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/main.scss */ \"./css/main.scss\");\n/* harmony import */ var _css_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_favicon_apple_touch_icon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/favicon/apple-touch-icon.png */ \"./assets/favicon/apple-touch-icon.png\");\n/* harmony import */ var _assets_favicon_favicon_32x32_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/favicon/favicon-32x32.png */ \"./assets/favicon/favicon-32x32.png\");\n/* harmony import */ var _assets_favicon_favicon_16x16_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/favicon/favicon-16x16.png */ \"./assets/favicon/favicon-16x16.png\");\n/* harmony import */ var _assets_favicon_site_webmanifest__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/favicon/site.webmanifest */ \"./assets/favicon/site.webmanifest\");\n/* harmony import */ var _assets_graphics_curved_border_flip_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/graphics/curved-border-flip.svg */ \"./assets/graphics/curved-border-flip.svg\");\n/* harmony import */ var _assets_img_aiyush_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/img/aiyush.jpg */ \"./assets/img/aiyush.jpg\");\n/* harmony import */ var _assets_graphics_prave_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/graphics/prave.svg */ \"./assets/graphics/prave.svg\");\n/* harmony import */ var _assets_graphics_fitster_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/graphics/fitster.svg */ \"./assets/graphics/fitster.svg\");\n/* harmony import */ var _assets_graphics_github_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/graphics/github.svg */ \"./assets/graphics/github.svg\");\n__webpack_require__(/*! file-loader?name=[name].[ext]!./index.html */ \"../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html\");\n\n\n\n\n\n\n\n\n/* Logos */\n\n\n\n\nvar ele = document.getElementById('border');\nvar border = new Image();\nborder.src = _assets_graphics_curved_border_flip_svg__WEBPACK_IMPORTED_MODULE_5__[\"default\"];\nele.appendChild(border);\nvar profile = document.getElementById('profileImg');\nvar pic = new Image();\npic.src = _assets_img_aiyush_jpg__WEBPACK_IMPORTED_MODULE_6__[\"default\"];\npic.alt = 'Profile Picture';\nprofile.appendChild(pic);\nvar miniProjects = [[_assets_graphics_prave_svg__WEBPACK_IMPORTED_MODULE_7__[\"default\"], 'prave', document.getElementById('prave-mini')], [_assets_graphics_fitster_svg__WEBPACK_IMPORTED_MODULE_8__[\"default\"], 'fitster', document.getElementById('fitster.mini')], [_assets_graphics_github_svg__WEBPACK_IMPORTED_MODULE_9__[\"default\"], 'github', document.getElementById('github-mini')]];\n\nfor (var _i = 0, _miniProjects = miniProjects; _i < _miniProjects.length; _i++) {\n  var mini = _miniProjects[_i];\n  console.log(mini);\n  var miniPic = new Image();\n  miniPic.src = mini[0];\n  miniPic.alt = mini[1];\n  mini[2].appendChild(miniPic);\n}\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 

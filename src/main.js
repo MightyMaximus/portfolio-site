@@ -9,6 +9,11 @@ import faviconMani from './assets/favicon/site.webmanifest';
 import curvedBorder from './assets/graphics/curved-border-flip.svg';
 import profilePic from './assets/img/aiyush.jpg';
 
+/* Logos */
+import prave from './assets/graphics/prave.svg';
+import fitster from './assets/graphics/fitster.svg';
+import github from './assets/graphics/github.svg';
+
 const ele = document.getElementById('border');
 const border = new Image();
 border.src = curvedBorder;
@@ -19,3 +24,17 @@ const pic = new Image();
 pic.src = profilePic;
 pic.alt = 'Profile Picture';
 profile.appendChild(pic);
+
+const miniProjects = [
+    [prave, 'prave', document.getElementById('prave-mini')],
+    [fitster, 'fitster', document.getElementById('fitster-mini')],
+    [github, 'github', document.getElementById('github-mini')]
+];
+for (let mini of miniProjects) {
+    console.log(mini);
+    const miniPic = new Image();
+    miniPic.src = mini[0];
+    miniPic.alt = mini[1];
+    miniPic.width = 32;
+    mini[2].appendChild(miniPic);
+}
