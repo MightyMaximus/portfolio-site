@@ -25,13 +25,18 @@ pic.src = profilePic;
 pic.alt = 'Profile Picture';
 profile.appendChild(pic);
 
+const praveTop = document.getElementById('prave-top');
+const temp = new Image();
+temp.src = prave;
+temp.alt = 'prave';
+praveTop.appendChild(temp);
+
 const miniProjects = [
     [prave, 'prave', document.getElementById('prave-mini')],
     [fitster, 'fitster', document.getElementById('fitster-mini')],
     [github, 'github', document.getElementById('github-mini')]
 ];
 for (let mini of miniProjects) {
-    console.log(mini);
     const miniPic = new Image();
     miniPic.src = mini[0];
     miniPic.alt = mini[1];
