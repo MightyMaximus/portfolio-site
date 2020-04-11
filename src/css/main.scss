@@ -1,3 +1,4 @@
+@import "base";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Raleway&display=swap');
 
 $body-color: #fafafa;
@@ -5,91 +6,33 @@ $container-color: #fff;
 $font-stack-heading: 'Raleway', sans-serif;
 $font-stack-text: 'Open Sans', sans-serif;
 $font-color: hsl(212, 20%, 13%);
-$cover-gradient: linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+$font-light-color: hsl(212, 20%, 68%);
+$line-height: 1.5;
+$temp-warning: #f6ae38;
 
+/* Gradients */
+$go-to-blue: #0470dc;
+$cover-gradient: linear-gradient(135deg, #13f1fc 0%, $go-to-blue 100%);
+
+/* Layout Breakpoints */
 $sm-min: 576px;
 $md-min: 768px;
 $lg-min: 992px;
 $xl-min: 1200px;
 
-%row {
-  display: flex;
-}
+/* Button Presets */
+$solid-btn-bg: #4591e7;
+$solid-btn-bor: #9dc0e7;
+$solid-btn-col: #fff;
+$hollow-btn-bg: #fff;
+$hollow-btn-bor: #ccd1dc;
+$hollow-btn-col: #192938;
 
-%col {
-  display: flex;
-  flex-direction: column;
-}
-
-%list-inline {
-  @extend %row;
-  padding: 0;
-
-  li {
-    list-style: none;
-  }
-}
-
-.list-inline {
-  @extend %list-inline;
-}
-
-.tech-list {
-  @extend %list-inline;
-  flex-wrap: wrap;
-}
-
-%button {
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 48px;
-  border: 1px solid;
-  padding: 8px 64px 8px 64px;
-  box-shadow: 0 2px 5px 1px #efefef;
-}
-
-%button:hover {
-  top: -1px;
-  text-decoration: none;
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
-  -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
-}
-
-%button:active {
-  -webkit-box-shadow: inset 0 0 5px #c1c1c1;
-  -moz-box-shadow: inset 0 0 5px #c1c1c1;
-  box-shadow: inset 0 0 5px #c1c1c1;
-  outline: none;
-}
-
-.button {
-  @extend %button;
-}
-
-.solid-button {
-  @extend %button;
-  background-color: #4591e7;
-  color: #fff;
-  border-color: #9dc0e7;
-}
-
-.hollow-button {
-  @extend %button;
-  border-color: #ccd1dc;
-  background-color: #fff;
-  color: #192938;
-}
-
-.link {
-  text-decoration: none;
-  color: #0470dc;
-  font-weight: bold;
-}
-
-.link:hover {
-  border-bottom: 2px solid #0470dc;
+@mixin button-maker($bg-color, $border-color, $color) {
+  @extend .button;
+  background-color: $bg-color;
+  border-color: $border-color;
+  color: $color;
 }
 
 body{
@@ -107,40 +50,40 @@ a, li, p {
 }
 
 p {
-  line-height: 1.5;
+  line-height: $line-height;
 }
 
 i {
-  color: hsl(212, 20%, 68%);
+  color: $font-light-color;
 }
 
 header {
+  @include flex(row);
   width: 100%;
   height: auto;
-  display: flex;
 }
 
 footer {
-  @extend %col;
+  @include flex(column);
   width: 100%;
   align-items: center;
 
   ul {
-    @extend %list-inline;
+    @extend .list-inline;
   }
+}
+
+#temp-banner {
+  @include flex(row);
+  width: 100%;
+  height: 30px;
+  background-color: $temp-warning;
+  justify-content: center;
+  align-items: center;
 }
 
 .span {
   font-family: $font-stack-text;
-}
-
-#temp-banner {
-  width: 100%;
-  height: 30px;
-  background-color: #F6AE38;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }
 
 .container {
@@ -150,12 +93,66 @@ footer {
   background-color: $container-color;
 }
 
-.row {
-  @extend %row;
+.list-inline {
+  @include flex(row);
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
-.col {
-  @extend %col;
+.tech-list {
+  @extend .list-inline;
+   li {
+     margin-right: 12px;
+     margin-bottom: 24px;
+     span {
+       border-radius: 4px;
+       border: 2px solid;
+       padding: 6px;
+       text-align: center;
+     }
+   }
+}
+
+.button {
+  @include box-shadow(0 2px 5px 1px $box-shadow);
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 48px;
+  border: 1px solid;
+  padding: 8px 64px 8px 64px;
+
+  &:hover {
+    @include box-shadow(inset 0 0 100px 100px rgba(255, 255, 255, 0.3));
+    top: -1px;
+    text-decoration: none;
+  }
+
+  &:active {
+    @include box-shadow(inset 0 0 5px #c1c1c1);
+    outline: none;
+  }
+}
+
+.solid-button {
+  @include button-maker($solid-btn-bg, $solid-btn-bor, $solid-btn-col);
+}
+
+.hollow-button {
+  @include button-maker($hollow-btn-bg, $hollow-btn-bor, $hollow-btn-col);
+}
+
+.link {
+  text-decoration: none;
+  color: $go-to-blue;
+  font-weight: bold;
+
+  &:hover {
+    border-bottom: 2px solid $go-to-blue;
+  }
 }
 
 #profileImg {
@@ -167,7 +164,7 @@ footer {
 }
 
 .cover {
-  @extend %col;
+  @include flex(column);
   width: 100%;
   height: 10em;
   justify-content: flex-end;
@@ -183,85 +180,4 @@ footer {
     width: 100%;
     height: 100%;
   }
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  perspective: 1000px;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  border: 1px solid #d8d8d8;
-  box-shadow: 0 2px 5px 1px #efefef;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.card-front, .card-back {
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.card-front {
-  @extend %col;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  border-radius: 10px;
-  display: none;
-  flex-direction: column;
-}
-
-.flipped {
-  transform: rotateY(180deg);
-}
-
-.card-top {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  width: 100%;
-  height: 96px;
-}
-
-.card-thumbnail > img {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 96px;
-}
-
-.card-thumbnail {
-  width: 96px;
-  height: 96px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 48px;
-}
-
-.card-body {
-  width: 90%;
-  align-self: center;
-}
-
-.card-bottom {
-  @extend %row;
-  justify-content: flex-end;
-}
-
-.prave-card {
-  background-color: #dfdbe5;
-  background-image: url("../assets/graphics/i-like-food.svg");
 }

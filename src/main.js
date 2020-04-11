@@ -1,5 +1,7 @@
 require('file-loader?name=[name].[ext]!./index.html');
 import style from './css/main.scss';
+import card from './css/card.scss';
+import base from './css/_base.scss'
 
 import faviconAp from './assets/favicon/apple-touch-icon.png';
 import favicon32 from './assets/favicon/favicon-32x32.png';
@@ -29,6 +31,7 @@ const praveTop = document.getElementById('prave-top');
 const temp = new Image();
 temp.src = prave;
 temp.alt = 'prave';
+temp.width = 96;
 praveTop.appendChild(temp);
 
 const miniProjects = [

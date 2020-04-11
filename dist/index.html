@@ -12,15 +12,15 @@
     <script src="https://kit.fontawesome.com/d871e8109c.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         function flip(id) { // simplify
-            const inner = document.getElementById(id).getElementsByClassName("card-inner")[0];
+            const inner = document.getElementById(id);
             const front = inner.getElementsByClassName('card-front')[0];
             const back = inner.getElementsByClassName('card-back')[0];
             if (window.getComputedStyle(front).display === "none") {
                 front.style.display = "flex";
                 back.style.display = "none";
             } else {
-                front.style.display = "none";
                 back.style.display = "flex";
+                front.style.display = "none";
             }
             inner.classList.toggle('flipped');
         }
@@ -81,17 +81,21 @@
             <div class="col">
                 <h2 style="text-align: center"><span style="border-bottom: 4px solid hsl(212, 77%, 59%); padding-bottom: 4px;">Projec</span>ts</h2>
                 <div>
-
+                    <!-- test1 -->
                     <!-- Prave Card -->
-                    <div id="prave" class="card">
-                        <div class="card-inner">
+                    <div class="card-flip">
+                        <div id="prave">
                             <div class="card-front">
-                                <div id="prave-top" class="card-top prave-card">
+                                <div class="card-top prave-card">
+                                    <div id="prave-top" class="card-thumbnail"></div>
                                 </div>
-                                <div class="card-body">
-                                    <h3>Prave</h3>
+                                <div class="card-body" style="padding-top: 48px;">
+                                    <div style="text-align: center">
+                                        <h3 style="text-align: center; font-weight: bold; letter-spacing: 2px; font-size: 32px; margin-bottom: 0;">Prave</h3>
+                                        <a href="https://prave.ca" target="_blank" rel="noopener" class="link">prave.ca</a>
+                                    </div>
                                     <p>Prave is the affordable alternative to grocery delivery. Our secret: we automatically price match and source your groceries from the cheapest nearby grocery store. We do this because unlike our competitors who inflate the cost of groceries with premiums, we instead profit from the savings we get you. We only earn when you save!</p>
-                                    <ul>
+                                    <ul class="tech-list">
                                         <li>
                                             <span>Angular2</span>
                                         </li>
@@ -101,6 +105,18 @@
                                         <li>
                                             <span>MongoDB</span>
                                         </li>
+                                        <li>
+                                            <span>NodeJS</span>
+                                        </li>
+                                        <li>
+                                            <span>Redux</span>
+                                        </li>
+                                        <li>
+                                            <span>Material</span>
+                                        </li>
+                                        <li>
+                                            <span>SCSS</span>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="card-bottom">
@@ -108,13 +124,15 @@
                                 </div>
                             </div>
                             <div class="card-back">
-                                <div class="card-top">
-
+                                <div>
+                                    <h3>Temporary Filler</h3>
                                 </div>
                                 <div class="card-body">
+                                    <span class="span">Youtube Video here</span>
                                     <p>Prave is the affordable alternative to grocery delivery. Our secret: we automatically price match and source your groceries from the cheapest nearby grocery store. We do this because unlike our competitors who inflate the cost of groceries with premiums, we instead profit from the savings we get you. We only earn when you save!</p>
                                 </div>
                                 <div class="card-bottom">
+                                    <a href="#" class="button">Read More</a>
                                     <button type="button" onclick="flip('prave')">Button</button>
                                 </div>
                             </div>
@@ -122,20 +140,12 @@
                     </div>
 
                     <!-- Fitster Card -->
-                    <div>
-
-                    </div>
                 </div>
             </div>
 
-            <!-- technologies + other info -->
-            <div>
-
-            </div>
-
             <!-- FOOTER -->
-            <footer>
-                <ul>
+            <footer style="padding: 32px 0;">
+                <ul style="font-size: 28px;">
                     <li>
                         <a href="https://github.com/MightyMaximus" target="_blank" title="github" rel="noopener">
                             <i class="fab fa-github"></i>
@@ -152,7 +162,7 @@
                         </a>
                     </li>
                 </ul>
-                <span class="span">Created by Aiyush Jain, © 2020</span>
+                <span class="span" style="margin-top: 8px;">Created by Aiyush Jain, © 2020</span>
                 <!--<span class="span">Made with HTML5, ES6, SCSS, Webpack, Firebase</span>-->
             </footer>
         </div>

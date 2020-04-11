@@ -1,0 +1,99 @@
+@import "base";
+
+$prave-bg-color: #dfdbe5;
+$fitster-bg-color: #c0ded6;
+
+%card-flip-sides {
+  @include flex(column);
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin rotateY($degree) {
+  transform: rotateY($degree);
+  -webkit-transform: rotateY($degree);
+  -moz-transform: rotateY($degree);
+  -o-transform: rotateY($degree);
+  -ms-transform: rotateY($degree);
+}
+
+.flipped {
+  @include rotateY(180deg);
+}
+
+.card {
+  @include flex(column);
+  justify-content: center;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 2px 5px 1px $box-shadow;
+  }
+
+  .card-top { /* TEMPORARY */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 96px;
+
+    .card-thumbnail {
+      width: 96px;
+      height: 96px;
+      margin: 48px auto auto auto;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .card-body {
+    width: 90%;
+    align-self: center;
+  }
+
+  .card-bottom {
+    @include flex(row);
+    justify-content: flex-end;
+  }
+}
+
+.card-flip {
+  @extend .card;
+  max-width: 384px;
+  height: 100%;
+  perspective: 1000px;
+
+  & > div {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    & > .card-front {
+      @extend %card-flip-sides;
+    }
+
+    & > .card-back {
+      @extend %card-flip-sides;
+      @include rotateY(180deg);
+      /*border-radius: 10px;*/
+      display: none;
+    }
+  }
+}
+
+#prave {
+  .card-top {
+    @include background-image("../assets/graphics/i-like-food.svg");
+    background-color: $prave-bg-color;
+  }
+}
+
+#fitster {
+  .card-top {
+    @include background-image("../assets/graphics/floating-cogs.svg");
+    background-color: $fitster-bg-color;
+  }
+}

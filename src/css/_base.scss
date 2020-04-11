@@ -1,0 +1,34 @@
+$box-shadow: #efefef;
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  -webkit-background-image: url($url);
+  -moz-background-image: url($url);
+  -o-background-image: url($url);
+}
+
+@mixin box-shadow($param) {
+  box-shadow: $param;
+  -webkit-box-shadow: $param;
+  -moz-box-shadow: $param;
+  -o-box-shadow: $param;
+}
+
+%full {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  @include flex(row);
+}
+
+.col {
+  @include flex(column);
+}

@@ -1,0 +1,104 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card-flip > div > .card-back, .card-flip > div > .card-front {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+
+.card, .card-flip {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card > div, .card-flip > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 2px 5px 1px #efefef;
+}
+.card .card-top, .card-flip .card-top {
+  /* TEMPORARY */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+  height: 96px;
+}
+.card .card-top .card-thumbnail, .card-flip .card-top .card-thumbnail {
+  width: 96px;
+  height: 96px;
+  margin: 48px auto auto auto;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.card .card-body, .card-flip .card-body {
+  width: 90%;
+  align-self: center;
+}
+.card .card-bottom, .card-flip .card-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.card-flip {
+  max-width: 384px;
+  height: 100%;
+  perspective: 1000px;
+}
+.card-flip > div {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-flip > div > .card-back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  /*border-radius: 10px;*/
+  display: none;
+}
+
+#prave .card-top {
+  background-image: url("../assets/graphics/i-like-food.svg");
+  -webkit-background-image: url("../assets/graphics/i-like-food.svg");
+  -moz-background-image: url("../assets/graphics/i-like-food.svg");
+  -o-background-image: url("../assets/graphics/i-like-food.svg");
+  background-color: #dfdbe5;
+}
+
+#fitster .card-top {
+  background-image: url("../assets/graphics/floating-cogs.svg");
+  -webkit-background-image: url("../assets/graphics/floating-cogs.svg");
+  -moz-background-image: url("../assets/graphics/floating-cogs.svg");
+  -o-background-image: url("../assets/graphics/floating-cogs.svg");
+  background-color: #c0ded6;
+}
+
+/*# sourceMappingURL=card.css.map */
