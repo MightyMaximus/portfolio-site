@@ -5,12 +5,10 @@ $prave-border-color: #9c92ac;
 $fitster-bg-color: #c0ded6;
 $fitster-border-color: #519b86;
 
-%card-flip-sides {
-  @include flex(column);
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+@mixin backface-visibility($param) {
+  backface-visibility: $param;
+  -webkit-backface-visibility: $param;
+  -moz-backface-visibility: $param;
 }
 
 @mixin rotateY($degree) {
@@ -19,6 +17,13 @@ $fitster-border-color: #519b86;
   -moz-transform: rotateY($degree);
   -o-transform: rotateY($degree);
   -ms-transform: rotateY($degree);
+}
+
+%card-flip-sides {
+  @include flex(column);
+  @include backface-visibility(hidden);
+  width: 100%;
+  height: 100%;
 }
 
 .flipped {

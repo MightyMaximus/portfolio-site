@@ -10,7 +10,7 @@ import favicon16 from './assets/favicon/favicon-16x16.png';
 import faviconMani from './assets/favicon/site.webmanifest';
 
 import curvedBorder from './assets/graphics/curved-border-flip.svg';
-import profilePic from './assets/img/aiyush.jpg';
+import profilePic from './assets/img/aiyush-200.jpg';
 
 /* Logos */
 import prave from './assets/graphics/prave.svg';
@@ -43,6 +43,7 @@ document.head.appendChild(fav4);
 const ele = document.getElementById('border');
 const border = new Image();
 border.src = curvedBorder;
+border.alt = 'curved border design svg';
 ele.appendChild(border);
 
 const profile = document.getElementById('profileImg');
