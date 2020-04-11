@@ -49,8 +49,14 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  padding: 32px 0;
   align-items: center;
 }
+footer ul {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
 #temp-banner {
   display: flex;
   flex-direction: row;
@@ -64,6 +70,15 @@ footer {
 
 .span {
   font-family: "Open Sans", sans-serif;
+}
+
+.light-text {
+  color: #9dacbe;
+}
+
+.body {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .container {
@@ -83,6 +98,9 @@ footer {
   list-style: none;
 }
 
+.tech-list {
+  margin-top: 8px;
+}
 .tech-list li {
   margin-right: 12px;
   margin-bottom: 24px;
@@ -94,7 +112,7 @@ footer {
   text-align: center;
 }
 
-.button, .hollow-button, .solid-button {
+.button, .card-button, .hollow-button, .solid-button {
   box-shadow: 0 2px 5px 1px #efefef;
   -webkit-box-shadow: 0 2px 5px 1px #efefef;
   -moz-box-shadow: 0 2px 5px 1px #efefef;
@@ -106,7 +124,7 @@ footer {
   border: 1px solid;
   padding: 8px 64px 8px 64px;
 }
-.button:hover, .hollow-button:hover, .solid-button:hover {
+.button:hover, .card-button:hover, .hollow-button:hover, .solid-button:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
   -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
@@ -114,7 +132,7 @@ footer {
   top: -1px;
   text-decoration: none;
 }
-.button:active, .hollow-button:active, .solid-button:active {
+.button:active, .card-button:active, .hollow-button:active, .solid-button:active {
   box-shadow: inset 0 0 5px #c1c1c1;
   -webkit-box-shadow: inset 0 0 5px #c1c1c1;
   -moz-box-shadow: inset 0 0 5px #c1c1c1;
@@ -132,6 +150,13 @@ footer {
   background-color: #fff;
   border-color: #ccd1dc;
   color: #192938;
+}
+
+.card-button {
+  background-color: #fff;
+  border-color: #4591e7;
+  color: #4591e7;
+  padding: 8px 32px 8px 32px;
 }
 
 .link {
@@ -167,6 +192,16 @@ footer {
 .curved-border img {
   width: 100%;
   height: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card-container > * {
+  margin-top: 32px;
 }
 
 /*# sourceMappingURL=main.css.map */

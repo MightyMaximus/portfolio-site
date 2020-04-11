@@ -1,7 +1,9 @@
 @import "base";
 
 $prave-bg-color: #dfdbe5;
+$prave-border-color: #9c92ac;
 $fitster-bg-color: #c0ded6;
+$fitster-border-color: #519b86;
 
 %card-flip-sides {
   @include flex(column);
@@ -35,19 +37,8 @@ $fitster-bg-color: #c0ded6;
     box-shadow: 0 2px 5px 1px $box-shadow;
   }
 
-  .card-top { /* TEMPORARY */
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    width: 100%;
-    height: 96px;
-
-    .card-thumbnail {
-      width: 96px;
-      height: 96px;
-      margin: 48px auto auto auto;
-      background-color: #fff;
-      border-radius: 50%;
-    }
+  .card-top {
+    @extend .card-body;
   }
 
   .card-body {
@@ -57,7 +48,9 @@ $fitster-bg-color: #c0ded6;
 
   .card-bottom {
     @include flex(row);
+    @extend .card-body;
     justify-content: flex-end;
+    padding-bottom: 12px;
   }
 }
 
@@ -73,6 +66,21 @@ $fitster-bg-color: #c0ded6;
 
     & > .card-front {
       @extend %card-flip-sides;
+
+      & > .card-top { /* TEMPORARY */
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 100%;
+        height: 96px;
+
+        .card-thumbnail {
+          width: 96px;
+          height: 96px;
+          margin: 48px auto auto auto;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
     }
 
     & > .card-back {
@@ -85,15 +93,27 @@ $fitster-bg-color: #c0ded6;
 }
 
 #prave {
-  .card-top {
+  .card-front > .card-top {
     @include background-image("../assets/graphics/i-like-food.svg");
     background-color: $prave-bg-color;
+  }
+
+  .tech-list {
+    span {
+      border-color: $prave-border-color;
+    }
   }
 }
 
 #fitster {
-  .card-top {
+  .card-front > .card-top {
     @include background-image("../assets/graphics/floating-cogs.svg");
     background-color: $fitster-bg-color;
+  }
+
+  .tech-list {
+    span {
+      border-color: $fitster-border-color;
+    }
   }
 }

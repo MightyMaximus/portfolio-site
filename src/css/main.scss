@@ -27,6 +27,9 @@ $solid-btn-col: #fff;
 $hollow-btn-bg: #fff;
 $hollow-btn-bor: #ccd1dc;
 $hollow-btn-col: #192938;
+$card-btn-bg: #fff;
+$card-btn-bor: #4591e7;
+$card-btn-col: #4591e7;
 
 @mixin button-maker($bg-color, $border-color, $color) {
   @extend .button;
@@ -66,10 +69,13 @@ header {
 footer {
   @include flex(column);
   width: 100%;
+  padding: 32px 0;
   align-items: center;
 
   ul {
     @extend .list-inline;
+    font-size: 28px;
+    margin-bottom: 0;
   }
 }
 
@@ -84,6 +90,15 @@ footer {
 
 .span {
   font-family: $font-stack-text;
+}
+
+.light-text {
+  color: $font-light-color;
+}
+
+.body {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .container {
@@ -104,9 +119,12 @@ footer {
 
 .tech-list {
   @extend .list-inline;
+  margin-top: 8px;
+
    li {
      margin-right: 12px;
      margin-bottom: 24px;
+
      span {
        border-radius: 4px;
        border: 2px solid;
@@ -145,6 +163,11 @@ footer {
   @include button-maker($hollow-btn-bg, $hollow-btn-bor, $hollow-btn-col);
 }
 
+.card-button {
+  @include button-maker($card-btn-bg, $card-btn-bor, $card-btn-col);
+  padding: 8px 32px 8px 32px;
+}
+
 .link {
   text-decoration: none;
   color: $go-to-blue;
@@ -179,5 +202,14 @@ footer {
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+.card-container {
+  @include flex(row);
+  justify-content: space-evenly;
+
+  & > * {
+    margin-top: 32px;
   }
 }

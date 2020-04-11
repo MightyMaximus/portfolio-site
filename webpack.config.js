@@ -8,8 +8,6 @@ module.exports = {
         path: __dirname + '/dist',
         filename: 'bundle.js'
     },
-    mode: "development",
-    watch: true,
     module: {
         rules: [{
             test: /\.s[ac]ss$/i,
