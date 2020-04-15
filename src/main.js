@@ -11,6 +11,7 @@ import faviconMani from './assets/favicon/site.webmanifest';
 
 import curvedBorder from './assets/graphics/curved-border-flip.svg';
 import profilePic from './assets/img/aiyush-200.jpg';
+import praveScreenshot from './assets/img/screenshot.png';
 
 /* Logos */
 import prave from './assets/graphics/prave.svg';
@@ -77,3 +78,10 @@ for (let mini of miniProjects) {
     miniPic.width = 32;
     mini[2].appendChild(miniPic);
 }
+
+const praveSdiv = document.getElementById('prave-screenshot');
+const temp3 = new Image();
+temp3.src = praveScreenshot;
+temp3.alt = 'screenshot of Prave interface';
+temp3.width = 192;
+praveSdiv.appendChild(temp3);
